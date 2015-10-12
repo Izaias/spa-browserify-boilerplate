@@ -1,0 +1,33 @@
+{
+  "name": "",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "build:stylus": "stylus -u nib -c --compress src/styles/app.styl -o public/css/app.css",
+    "watch:stylus": "stylus -w -u nib -c src/styles/app.styl -o public/css/app.css",
+    "build:js": "browserify src/scripts/app.js | uglifyjs -mc > public/js/app.js",
+    "watch:js": "watchify src/scripts/app.js -o public/js/app.js -dv",
+    "watch": "npm run watch:stylus & npm run watch:js",
+    "sync": "browser-sync start --files 'public/*.html, public/css/**, public/js/**' --server 'public'",
+    "watch-sync": "npm run watch & npm run sync",
+    "build:deploy": "npm run build:stylus & npm run build:js",
+    "bootstrap:step1" : "mkdir -p ./public/css ./public/js",
+    "bootstrap:step2" : "touch ./public/css/app.css ./public/js/app.js",
+    "bootstrap:step3" : "npm install --save-dev",
+    "bootstrap": "npm run bootstrap:step1 && npm run bootstrap:step2 && npm run bootstrap:step3 && npm run watch-sync"
+  },
+  "author": "Izaias Cavalcanti <izaias@iuqo.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.9.10",
+    "browserify": "^11.1.0",
+    "nib": "^1.1.0",
+    "stylus": "^0.52.4",
+    "uglifyjs": "^2.4.10",
+    "watchify": "^3.4.0"
+  },
+  "dependencies": {
+    "jquery": "^2.1.4"
+  }
+}

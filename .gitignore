@@ -1,0 +1,10 @@
+.project
+.settings/
+.idea/
+node_modules/
+npm-debug.log
+
+.DS_Store
+
+public/css/
+public/js/
