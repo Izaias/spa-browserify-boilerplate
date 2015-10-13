@@ -1,5 +1,5 @@
 # SPA Browserify Boilerplate ⚡
-Basic structure to building classic SPAs with browserify.
+Basic files for building SPAs with Browserify.
 # Why?
 It makes no sense having to recreate the basics everytime I start a new project, a prototype or a simple experiment.
 
