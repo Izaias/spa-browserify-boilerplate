@@ -1,7 +1,7 @@
 # SPA Browserify Boilerplate ⚡
 Basic files for building SPAs with Browserify.
 # Why?
-It makes no sense having to recreate the basics everytime I start a new project, a prototype or a simple experiment.
+It makes no sense having to recreate the basics everytime I start a new project or prototype.
 
 #How?
 Just clone the repo, run `npm start` and watch the magic happen. The command relies on the scripts inside the package.json file to build all the basic files for you.
